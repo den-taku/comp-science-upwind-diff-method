@@ -32,8 +32,7 @@ fn main() {
         u_r[x] = (PI * (1.0 + delta_x * x as f64)).sin();
     }
 
-    println!(
-        "{:?}",
-        u_r.iter().zip(values[100].iter()).collect::<Vec<_>>()
-    );
+    for (x, (_r, c)) in u_r.iter().zip(values[100].iter()).enumerate() {
+        println!("{x:2}: {c}");
+    }
 }
